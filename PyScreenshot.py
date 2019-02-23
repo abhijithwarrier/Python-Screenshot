@@ -8,7 +8,6 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox, filedialog
 
-#---
 
 # Defining CreateWidgets function to create the widgets
 def CreateWidgets():
@@ -25,7 +24,6 @@ def CreateWidgets():
     buttonattachmentEmail = Button(root, text="CAPTURE", command=Screenshot, width=10)
     buttonattachmentEmail.grid(row=2, column=1, pady=5, padx=5)
 
-#---
 
 # Defining Browse function to save the image
 # Set initialdir to a path of your choice to save the screenshot
@@ -36,6 +34,7 @@ def Browse():
                                 filetypes = (("PNG Files","*.png"),("All Files","*.*")))
     root.entryattachmentEmail.insert('1', root.fileName)
 
+
 # Defining Screenshot function to take screenshot
 def Screenshot():
     # Taking the screenshot and saving in screenshot variable
@@ -45,7 +44,6 @@ def Screenshot():
     screenshot.save(root.fileName)
     messagebox.showinfo("SUCCESS","SCREENSHOT CAPTURED")
 
-#---
 
 # Creating object root of tk
 root = tk.Tk()
